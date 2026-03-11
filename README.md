@@ -107,8 +107,9 @@ CREATE TABLE ENROLLMENT (
     FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID),
     FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
 );
+```
 
-
+```
 Sample Queries
 
 Query 1: Students in a Specific Class
@@ -120,7 +121,8 @@ JOIN CLASS c ON e.ClassID = c.ClassID
 WHERE c.Semester = 'Fall' AND c.Year = 2025
 ORDER BY s.LName;
 
-
+```
+```
 Query 2: Average Credits per Department
 
 SELECT i.Dept, AVG(co.Credits) AS AvgCredits
@@ -128,8 +130,9 @@ FROM INSTRUCTOR i
 JOIN CLASS c ON i.InstructorID = c.InstructorID
 JOIN COURSE co ON c.CourseCode = co.CourseCode
 GROUP BY i.Dept;
+```
 
-
+```
 Query 3: Instructor with Most Classes
 
 SELECT i.FName, i.LName, COUNT(c.ClassID) AS ClassCount
@@ -144,7 +147,8 @@ HAVING COUNT(c.ClassID) = (
         GROUP BY InstructorID
     ) AS Counts
 );
-
+```
+```
 Stored Procedures
 
 Procedure 1: Get Classes by Instructor
@@ -158,6 +162,8 @@ BEGIN
     WHERE c.InstructorID = instrID;
 END //
 DELIMITER ;
+```
+```
 
 Procedure 2: Update Student Grade
 
