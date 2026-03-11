@@ -185,7 +185,7 @@ END //
 DELIMITER ;
 ```
 
-📁 Project Structure
+## 📁 Project Structure
 
 University-System-Database/
 ├── schemas/
