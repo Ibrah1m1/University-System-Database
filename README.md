@@ -53,53 +53,6 @@ A normalized relational database that:
 ---
 
 
-## 📊 Database Schema
-
-### Entities & Relationships
-
-```mermaid
-erDiagram
-    STUDENT ||--o{ ENROLLMENT : "enrolls in"
-    CLASS ||--o{ ENROLLMENT : "contains"
-    INSTRUCTOR ||--o{ CLASS : "teaches"
-    COURSE ||--o{ CLASS : "offered as"
-    
-    STUDENT {
-        int StudentID PK
-        string FName
-        string LName
-        string Email
-    }
-    
-    INSTRUCTOR {
-        int InstructorID PK
-        string FName
-        string LName
-        string Dept
-    }
-    
-    COURSE {
-        string CourseCode PK
-        string Title
-        int Credits
-    }
-    
-    CLASS {
-        int ClassID PK
-        string CourseCode FK
-        int InstructorID FK
-        string Semester
-        int Year
-        string Time
-    }
-    
-    ENROLLMENT {
-        int StudentID FK
-        int ClassID FK
-        decimal Grade
-    }
-
-```
 
 ## 📊 Database Schema
 
@@ -120,7 +73,13 @@ erDiagram
 - **INSTRUCTOR** ←→ **CLASS**: One instructor teaches many classes
 - **COURSE** ←→ **CLASS**: One course is offered as many sections
 
+
+
+-------------------------------------------------------------------------
+
 ### Normalization
+
+
 
 ✅ All tables are in **3NF (Third Normal Form)**
 
