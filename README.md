@@ -107,7 +107,7 @@ CREATE TABLE ENROLLMENT (
     FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID),
     FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
 );
-```
+
 
 Sample Queries
 
@@ -173,6 +173,7 @@ BEGIN
     WHERE StudentID = studID AND ClassID = clsID;
 END //
 DELIMITER ;
+```
 
 📁 Project Structure
 
