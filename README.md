@@ -60,8 +60,8 @@ A normalized relational database that:
 erDiagram
     STUDENT ||--o{ ENROLLMENT : "enrolls in"
     CLASS ||--o{ ENROLLMENT : "contains"
-    INSTRUCTOR ||--o { CLASS : "teaches"
-    COURSE ||--o { CLASS : "offered as"
+    INSTRUCTOR ||--o{ CLASS : "teaches"
+    COURSE ||--o{ CLASS : "offered as"
     
     STUDENT {
         int StudentID PK
