@@ -56,56 +56,24 @@ A normalized relational database that:
 
 ### Entities & Relationships
 
-```mermaid
-erDiagram
-    STUDENT ||--o{ ENROLLMENT : "enrolls in"
-    CLASS ||--o{ ENROLLMENT : "contains"
-    INSTRUCTOR ||--o{ CLASS : "teaches"
-    COURSE ||--o{ CLASS : "offered as"
-    
-    STUDENT {
-        int StudentID PK
-        string FName
-        string LName
-        string Email
-    }
-    
-    INSTRUCTOR {
-        int InstructorID PK
-        string FName
-        string LName
-        string Dept
-    }
-    
-    COURSE {
-        string CourseCode PK
-        string Title
-        int Credits
-    }
-    
-    CLASS {
-        int ClassID PK
-        string CourseCode FK
-        int InstructorID FK
-        string Semester
-        int Year
-        string Time
-    }
-    
-    ENROLLMENT {
-        int StudentID FK
-        int ClassID FK
-        decimal Grade
-    }
+| Table | Primary Key | Foreign Keys | Attributes |
+|-------|------------|--------------|------------|
+| **STUDENT** | StudentID | — | FName, LName, Email |
+| **INSTRUCTOR** | InstructorID | — | FName, LName, Dept |
+| **COURSE** | CourseCode | — | Title, Credits |
+| **CLASS** | ClassID | CourseCode, InstructorID | Semester, Year, Time |
+| **ENROLLMENT** | (StudentID, ClassID) | StudentID, ClassID | Grade |
 
+### Relationships
 
+- **STUDENT** ←→ **ENROLLMENT**: One student enrolls in many classes
+- **CLASS** ←→ **ENROLLMENT**: One class contains many students  
+- **INSTRUCTOR** ←→ **CLASS**: One instructor teaches many classes
+- **COURSE** ←→ **CLASS**: One course is offered as many sections
 
+### Normalization
 
-        decimal Grade
-    }
-
-
-```
+✅ All tables are in **3NF (Third Normal Form)**
 
 ### Table Structure
 
@@ -315,7 +283,5 @@ java Main
 - [OOP Principles](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/)
 
 
-Made with ❤️ by the Healthify Team
+Made with ❤️ by the Team
 
-│   └── test_cases.sql
-└── README.md
