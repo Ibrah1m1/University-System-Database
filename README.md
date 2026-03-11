@@ -282,13 +282,16 @@ java Main
 [Project_DS.pdf](https://github.com/user-attachments/files/25886669/Project_DS.pdf)
 
 
-🔗 Related Links
-
 ## 🔗 Related Links
 
-- [Java Documentation](https://docs.oracle.com/javase/)
-- [Data Structures Tutorial](https://www.geeksforgeeks.org/data-structures/)
-- [OOP Principles](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/)
+- [MySQL Documentation](https://dev.mysql.com/doc/)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- [SQL Tutorial - W3Schools](https://www.w3schools.com/sql/)
+- [Draw.io - ERD Design Tool](https://app.diagrams.net/)
+- [Database Normalization Guide](https://www.geeksforgeeks.org/database-normalization/)
+- [Entity-Relationship Modeling](https://www.geeksforgeeks.org/er-model-in-dbms/)
+- [SQL JOINs Explained](https://www.geeksforgeeks.org/sql-join-set-1-inner-join/)
+- [Stored Procedures Tutorial](https://www.geeksforgeeks.org/stored-procedures-in-sql/)
 
 
 Made with ❤️ by the Team
