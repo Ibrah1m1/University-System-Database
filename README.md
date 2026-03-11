@@ -55,7 +55,49 @@ A normalized relational database that:
 ## 📊 Database Schema
 
 ### Entities & Relationships
-┌─────────────┐ ┌─────────────┐ ┌─────────────┐ │ STUDENT │ │ ENROLLMENT │ │ CLASS │ ├─────────────┤ ├─────────────┤ ├─────────────┤ │ StudentID PK│◄─────►│ StudentID FK│ │ ClassID PK │ │ FName │ │ ClassID FK │◄─────►│ CourseCode FK│ │ LName │ │ Grade │ │ InstructorID FK│ │ Email │ └─────────────┘ │ Semester │ └─────────────┘ │ Year │ │ Time │ ┌─────────────┐ ┌─────────────┐ └─────────────┘ │ INSTRUCTOR │ │ COURSE │ ├─────────────┤ ├─────────────┤ │ InstructorID│ │ CourseCode PK│ │ FName │ │ Title │ │ LName │ │ Credits │ │ Dept │ └─────────────┘ └─────────────┘
+
+```mermaid
+erDiagram
+    STUDENT ||--o{ ENROLLMENT : "enrolls in"
+    CLASS ||--o{ ENROLLMENT : "contains"
+    INSTRUCTOR ||--o{ CLASS : "teaches"
+    COURSE ||--o{ CLASS : "offered as"
+    
+    STUDENT {
+        int StudentID PK
+        string FName
+        string LName
+        string Email
+    }
+    
+    INSTRUCTOR {
+        int InstructorID PK
+        string FName
+        string LName
+        string Dept
+    }
+    
+    COURSE {
+        string CourseCode PK
+        string Title
+        int Credits
+    }
+    
+    CLASS {
+        int ClassID PK
+        string CourseCode FK
+        int InstructorID FK
+        string Semester
+        int Year
+        string Time
+    }
+    
+    ENROLLMENT {
+        int StudentID FK
+        int ClassID FK
+        decimal Grade
+    }
+```
 
 
 
@@ -186,6 +228,7 @@ DELIMITER ;
 ```
 
 ## 📁 Project Structure
+```
 
 University-System-Database/
 ├── schemas/
@@ -201,17 +244,48 @@ University-System-Database/
 │   └── user_manual.pdf
 ├── data/
 │   ├── sample_data.sql
+```
 
+
+### 🎓 Learning Outcomes
+
+✅ Applied Linked Lists for efficient queue management (O(1) operations).
+
+✅ Used HashMaps for fast stock lookup and updates (O(1) average case).
+
+✅ Implemented stack-like structure for order history logging.
+
+✅ Practiced Object-Oriented Programming principles (encapsulation, abstraction).
+
+✅ Developed a complete console application with menu-driven interface.
+
+✅ Collaborated on team-based software development workflow.
+
+## 🚀 How to Run
+```
+
+# Clone the repository
+git clone https://github.com/Ibrah1m1/Restaurant-Order-System.git
+
+# Navigate to project directory
+cd Restaurant-Order-System/src
+
+# Compile all Java files
+javac *.java classes/*.java utils/*.java
+
+# Run the application
+java Main
+```
 
 
 ## 👥 Team
 
 | Name | Role |
 |------|------|
-| **Ibrahim Eissa** |Leader|
-| **Abdullah Misar** | Member |
-| **Ryan Khaled** | Member |
-| **Yazeed Bafaqih** |Member|
+| **Ibrahim Eissa** |Leader,Core Logic, Data Structures|
+| **Eyad Alghamdi** | Order Management, Testing |
+| **Order Management, Testing** | Order Management, Testing |
+| **Abdul Malik Al-Zahrani** |Stock Management, Bug Fixes|
 
 ## 📧 Contact
 
@@ -224,14 +298,18 @@ University-System-Database/
 -🐙 GitHub: https://github.com/Ibrah1m1
 
 -📄 Project Documentation
-[_Project_DB.pdf](https://github.com/user-attachments/files/25886410/_Project_DB.pdf)
+
+[Project_DS.pdf](https://github.com/user-attachments/files/25886669/Project_DS.pdf)
 
 
- 🔗 Related Links
+🔗 Related Links
 
-MySQL Documentation
-PostgreSQL Documentation
-SQL Tutorial - W3Schools
+## 🔗 Related Links
+
+- [Java Documentation](https://docs.oracle.com/javase/)
+- [Data Structures Tutorial](https://www.geeksforgeeks.org/data-structures/)
+- [OOP Principles](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/)
+
 
 Made with ❤️ by the Healthify Team
 
