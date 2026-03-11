@@ -108,7 +108,7 @@ CREATE TABLE ENROLLMENT (
     FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
 );
 ```
-###Sample Queries
+### Sample Queries
 
 Query 1: Students in a Specific Class
 ```
@@ -151,7 +151,8 @@ HAVING COUNT(c.ClassID) = (
     ) AS Counts
 );
 ```
-###Stored Procedures
+### Stored Procedures
+
 Procedure 1: Get Classes by Instructor
 ```
 
