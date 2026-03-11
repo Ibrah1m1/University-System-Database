@@ -98,10 +98,6 @@ erDiagram
         decimal Grade
     }
 
-```
-
-
-
 
 ### Table Structure
 
