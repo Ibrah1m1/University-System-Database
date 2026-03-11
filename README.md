@@ -100,66 +100,7 @@ erDiagram
 
 
 
----
 
-## ⚠️ **IMPORTANT - Copy Exactly:**
-
-1. **Start with** ````markdown` (4 backticks + markdown)
-2. **Then** `## 📊 Database Schema`
-3. **Then** `### Entities & Relationships`
-4. **Then** ```` ```mermaid` (3 backticks + mermaid)
-5. **Paste the diagram code**
-6. **Close with** ```` ``` ``` (3 backticks)
-7. **Close with** ```` ``` ``` (4 backticks)
-
----
-
-## 📝 **Complete Section to Copy:**
-
-```markdown
-## 📊 Database Schema
-
-### Entities & Relationships
-
-```mermaid
-erDiagram
-    STUDENT ||--o{ ENROLLMENT : "enrolls in"
-    CLASS ||--o{ ENROLLMENT : "contains"
-    INSTRUCTOR ||--o{ CLASS : "teaches"
-    COURSE ||--o{ CLASS : "offered as"
-    
-    STUDENT {
-        int StudentID PK
-        string FName
-        string LName
-        string Email
-    }
-    
-    INSTRUCTOR {
-        int InstructorID PK
-        string FName
-        string LName
-        string Dept
-    }
-    
-    COURSE {
-        string CourseCode PK
-        string Title
-        int Credits
-    }
-    
-    CLASS {
-        int ClassID PK
-        string CourseCode FK
-        int InstructorID FK
-        string Semester
-        int Year
-        string Time
-    }
-    
-    ENROLLMENT {
-        int StudentID FK
-        int ClassID FK
         decimal Grade
     }
 
@@ -346,10 +287,9 @@ java Main
 
 | Name | Role |
 |------|------|
-| **Ibrahim Eissa** |Leader,Core Logic, Data Structures|
-| **Eyad Alghamdi** | Order Management, Testing |
-| **Order Management, Testing** | Order Management, Testing |
-| **Abdul Malik Al-Zahrani** |Stock Management, Bug Fixes|
+| **Ibrahim Eissa** |Leader,Database Design, SQL Implementation|
+| **Yassen Sayari** | ERD Design, Documentation |
+| **Mohammed Mamdouh** | Query Development, Testing |
 
 ## 📧 Contact
 
