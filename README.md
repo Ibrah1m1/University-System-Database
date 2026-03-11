@@ -57,6 +57,7 @@ A normalized relational database that:
 ### Entities & Relationships
 
 ```mermaid
+
 erDiagram
     STUDENT ||--o{ ENROLLMENT : "enrolls in"
     CLASS ||--o{ ENROLLMENT : "contains"
@@ -97,6 +98,7 @@ erDiagram
         int ClassID FK
         decimal Grade
     }
+
 ```
 
 ### Table Structure
